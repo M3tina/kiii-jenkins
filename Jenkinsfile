@@ -11,10 +11,8 @@ pipeline {
       steps {
         script {
           def dockerImageTag = "${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
-          // Build the Docker image
-          def dockerImage = docker.build("M3tina/kiii-jenkins:${dockerImageTag}")
-          // Store the Docker image reference in the 'app' variable
-          app = dockerImage
+                    // Build the Docker image
+           def dockerImage = docker.build("M3tina/kiii-jenkins:${dockerImageTag}")
         }
 
       }
