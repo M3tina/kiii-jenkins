@@ -10,9 +10,7 @@ pipeline {
         stage('Build image') {
             steps {
                 script {
-                   def dockerImageTag = "${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
-                    // Build the Docker image
-                    def dockerImage = docker.build("M3tina/kiii-jenkins:${dockerImageTag}")
+                  app = docker.build("mjovanovik/kiii-jenkins")
                 }
             }
         }
