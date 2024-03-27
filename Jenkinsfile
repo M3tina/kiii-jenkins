@@ -10,7 +10,7 @@ pipeline {
         stage('Build image') {
             steps {
                 script {
-                  app = docker.build("mjovanovik/kiii-jenkins")
+                  app = docker.build("M3tina/kiii-jenkins")
                 }
             }
         }
